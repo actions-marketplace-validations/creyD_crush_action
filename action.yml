@@ -1,0 +1,32 @@
+name: Prettier Action
+description: Automatically runs prettier on all your changes.
+
+author: Conrad Großer <grosserconrad@gmail.com>
+
+inputs:
+  commit_message:
+    description: Commit message
+    required: false
+    default: 'Prettified Code!'
+  commit_options:
+    description: Commit options
+    required: false
+  file_pattern:
+    description: File pattern used for `git add`
+    required: false
+    default: '*'
+  branch:
+    description: Target branch for the changes
+    required: true
+  folder:
+    description: Folder the action searches
+    required: false
+    default: '.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'award'
+  color: 'green'
