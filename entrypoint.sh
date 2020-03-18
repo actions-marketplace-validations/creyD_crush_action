@@ -52,7 +52,6 @@ then
     git commit -m "$INPUT_COMMIT_MESSAGE" --author="$GITHUB_ACTOR <$GITHUB_ACTOR@users.noreply.github.com>" ${INPUT_COMMIT_OPTIONS:+"$INPUT_COMMIT_OPTIONS"}
     _git_push
     echo "Changes pushed successfully."
-  fi
 else
   echo "Nothing to commit. Exiting."
 fi
