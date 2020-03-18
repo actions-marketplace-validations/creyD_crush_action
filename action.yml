@@ -18,6 +18,10 @@ inputs:
   branch:
     description: Target branch for the changes
     required: true
+  folder:
+    description: Starting folder for recursive search
+    required: false
+    default: '.'
 
 runs:
   using: 'docker'

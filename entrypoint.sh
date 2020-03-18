@@ -36,9 +36,10 @@ _git_push() {
 }
 
 # PROGRAM
-find . -type f -name "*.jpg" -exec jpegoptim {} \;
-find . -type f -name "*.jpeg" -exec jpegoptim {} \;
-find . -type f -name "*.png" -exec optipng -nc -nb -o7 {} \;
+find $INPUT_FOLDER -type f -name "*.jpg" -exec jpegoptim {} \;
+find $INPUT_FOLDER -type f -name "*.jpeg" -exec jpegoptim {} \;
+# nc nb are so that no color information is lost
+find $INPUT_FOLDER -type f -name "*.png" -exec optipng -nc -nb -o7 {} \;
 
 # To keep runtime good, just continue if something was changed
 if _git_changed;
