@@ -37,6 +37,7 @@ _git_push() {
 
 # PROGRAM
 find -type f -name "*.png" -exec optipng -nc -nb -o7 {} \;
+find -type f -name "*.jpg" -exec jpegoptim -nc -nb -o7 {} \;
 
 # To keep runtime good, just continue if something was changed
 if _git_changed;
