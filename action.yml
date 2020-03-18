@@ -18,10 +18,6 @@ inputs:
   branch:
     description: Target branch for the changes
     required: true
-  folder:
-    description: Folder the action searches
-    required: false
-    default: '.'
 
 runs:
   using: 'docker'
