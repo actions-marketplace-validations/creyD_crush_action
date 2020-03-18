@@ -36,7 +36,7 @@ _git_push() {
 }
 
 # PROGRAM
-# TODO: Add actual commands for compressing
+find -type f -name "*.png" -exec optipng -nc -nb -o7 {} \;
 
 # To keep runtime good, just continue if something was changed
 if _git_changed;

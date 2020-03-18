@@ -1,5 +1,5 @@
-name: Prettier Action
-description: Automatically runs prettier on all your changes.
+name: Crush Action
+description: Losslessly reduces file size for PNGs
 
 author: Conrad Großer <grosserconrad@gmail.com>
 
@@ -7,7 +7,7 @@ inputs:
   commit_message:
     description: Commit message
     required: false
-    default: 'Prettified Code!'
+    default: 'Optimised your images!'
   commit_options:
     description: Commit options
     required: false
