@@ -1,6 +1,6 @@
 # GitHub Crush Action
 
-GitHub action for automatic lossless image compression using OptiPNG for PNG compression and jpegoptim for JPG compression.
+GitHub action for automatic lossless image compression using [OptiPNG](http://optipng.sourceforge.net/) for PNG compression and [jpegoptim](https://www.kokkonen.net/tjko/projects.html) for JPG compression.
 
 ## Usage
 
@@ -8,11 +8,11 @@ GitHub action for automatic lossless image compression using OptiPNG for PNG com
 
 | Parameter | Required | Default | Description |
 | - | :-: | :-: | - |
+| folder | :x: | . | Custom search folder, if you don't want to search the whole repository. |
 | commit_options | :x: | - | Custom git commit options |
-| commit_message | :x: | Prettified Code! | Custom git commit message |
+| commit_message | :x: | Optimised your images! | Custom git commit message |
 | file_pattern | :x: | * | Custom git add file pattern |
 | branch | :white_check_mark: | - | There are two types of action triggers in GitHub: on pull request and on push. The branch needs to be defined for both, but in case of the pull request trigger it should have `${{ github.head_ref }}` and on push it should have the branch the trigger is designed for. |
-| folder | :x: | . | Custom search folder, if you don't want to search the whole repository. |
 
 ### Example Config
 
@@ -34,7 +34,7 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
-    - name: Prettify the JS Code
+    - name: Crush Images!
       uses: creyD/crush_action@v1.0
       with:
         branch: ${{ github.head_ref }}
@@ -60,7 +60,7 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
-    - name: Prettify the JS Code
+    - name: Crush Images!
       uses: creyD/crush_action@v1.0
       with:
         branch: master

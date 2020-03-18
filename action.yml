@@ -1,5 +1,5 @@
 name: Crush Action
-description: Losslessly reduces file size for PNGs
+description: Losslessly reduces file size for PNG and JPG
 
 author: Conrad Großer <grosserconrad@gmail.com>
 
@@ -28,5 +28,5 @@ runs:
   image: 'Dockerfile'
 
 branding:
-  icon: 'award'
+  icon: 'aperture'
   color: 'green'
